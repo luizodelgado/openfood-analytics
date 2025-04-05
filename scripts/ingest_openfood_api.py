@@ -7,7 +7,7 @@ import pyarrow.parquet as pq
 import boto3
 
 # === CONFIG ===
-BUCKET = "openfood-bronze"
+BUCKET = "openfood-analytics-luiz"
 DATA_DIR = "data/bronze"
 PAGE_SIZE = 1000
 MAX_PAGES = 5
