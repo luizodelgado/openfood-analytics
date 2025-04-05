@@ -1,0 +1,8 @@
+requests
+pyspark
+boto3
+pandas
+pyarrow
+dbt-core
+duckdb
+apache-airflow==2.8.0

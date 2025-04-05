@@ -1,0 +1,11 @@
+# Virtual environment
+venv/
+
+# Local data
+data/
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+.DS_Store
+__pycache__/
