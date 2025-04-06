@@ -34,5 +34,9 @@ print(f"Transformed data saved to: {OUTPUT_PATH}")
 
 # Upload to S3
 s3 = boto3.client("s3")
-s3.upload_file(OUTPUT_PATH, BUCKET, S3_KEY)
+for root, _, files in os.walk(OUTPUT_PATH):
+    for file in files:
+        full_path = os.path.join(root, file)
+        s3_key = os.path.join(S3_KEY, os.path.relpath(full_path, OUTPUT_PATH))
+        s3.upload_file(full_path, BUCKET, s3_key)
 print(f"Transformed file uploaded to S3: s3://{BUCKET}/{S3_KEY}")
